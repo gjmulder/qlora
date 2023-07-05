@@ -10,8 +10,6 @@ LORA_CHKPTS="$BASE_MODEL-$DATA-$RUN"
 CUDA_VISIBLE_DEVICES=0 python qlora.py \
   --model_name_or_path $HF_USER/$BASE_MODEL \
   --dataset $DATA \
-  --bits 8 \
-  --adam8bit \
   --eval_dataset_size 2000 \
   --evaluation_strategy steps \
   --logging_steps 20 \
